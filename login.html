@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airlines</title>
+    <link rel="stylesheet" href="styles.css">
+    
+        <style>
+        body{
+            background-image:url(loginpage.avif);
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+    <script>
+        function myvalid(){
+        var uname=document.myform.username.value;
+        var pass=document.myform.password.value;
+        if(uname=="" || pass==null){
+            alert("Name cant be blank");
+        }
+        else if(pass.length<6){
+            alert("Password must be 6 letters");
+            return false;
+        }
+            return true;
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            
+                <a href="index.html">Home</a>
+                <a href="info.html">Info</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                
+        </nav>
+    </header>
+    
+        <div class="abc">
+    <center>
+        <form action="info.html"  name="myform" onsubmit="return myvalid(this)">
+        USER NAME <input id="username" type="text" placeholder="Enter name" required/><br>
+        PASSWORD<input id="password" type="password" placeholder="Enter email"required/><br>
+        <input type="submit">
+    </center>
+    </div>
+    
+    </form> 
+</body>
+</html>
